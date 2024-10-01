@@ -1,0 +1,101 @@
+/* The css box model can be viewed visually from the dev tools in our browsers . 
+
+Box model is the structure that defines how elements are displayed and how space is calculated on a webpage. It consists of four main parts:
+
+    - Content: The actual content of the element, like text or images.
+    - Padding: The space between the content and the border, which makes the content appear inset.
+    - Border: A line surrounding the padding and content.
+    - Margin: The space outside the border, creating distance between this element and others.
+
+These layers together affect the element's overall width and height on the page.
+
+We use css reset to control the margin padding etc ourselves .
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* The default box model is content-box. In this model, the specified width (e.g., 400px) only applies to the content area, and any padding added increases the total size of the element beyond 400px. So, if you set a padding, the overall element will be larger than 400px.
+
+    However, when using the border-box model, the padding is included within the specified width. This means that if you set a width of 400px and add padding, the total size of the element will still be 400px because the padding is contained within that width.
+
+    But margin is outside the css boxes we create .  
+    */
+}
+
+/* h1 {
+    border: 2px dashed red; 
+    width: 400px; 
+    padding: 0.5em; 
+} These settings will be more likely be put on the container i.e. the header element . 
+header {
+    border: 2px dashed red; 
+    width: 400px; 
+    padding: 1.5rem; We don't need rem anymore 
+}
+
+May be not the header too, we want to assign the settings to a container class, so that more than one type of element may get it . 
+
+ */
+.container {
+    /* border: 2px dashed red; 3px is the default border */
+    border: 2px outset red;
+    /* or, 2px double  red */
+
+    /* 
+    border-top: 5px solid green;
+
+    We could also break out each individual setting.
+
+    border-top-width: 5px;
+    border-top-style: ridge;
+    border-top-color: blue;
+
+    border-right: 10px dotted blue;
+    */
+    
+
+    font-size: 1.5rem;
+    /* margin: 1em ; On the outside set the margin. We could set this to 1em or 1.5rem as font-size is set to 1.5rem  */
+
+    /*
+    
+    There are margin-top, margin-right, margin-left and margin-bottom.
+    */
+
+    /* margin-top: 1.5em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 1.5em; 
+    
+    There is a shorthand for this .
+    */
+    /* margin: 1.5em 2em; Applys to all sides. 1.5 is applied to top and bottom (as they are same) and similarly 2em to left and right. 
+    Similar thing can be done to padding too.  */
+
+    /* padding: 1.5em 2em 3em 4em; */
+
+
+    padding: 1.5em;
+    margin: 1.5em;
+
+    /* Difference b/w outline and the border is that it doesn't take up space. */
+
+    outline: 5px solid purple;
+    /* outline-offset: 5px; 5px further out from our border. Or, you can give a -ve value making the outline inside the border */
+
+    outline-offset: -20px;
+
+    
+}
+
+.circle {
+    margin: 3rem auto; /* Centred horizontally */ 
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #000;
+    border-radius: 50px; /* Rounds the corners. 50 is half of width and height . */
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+}
+

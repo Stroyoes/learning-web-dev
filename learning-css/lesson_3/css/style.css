@@ -1,0 +1,63 @@
+/* html {
+
+    Default font-size in all browsers is 16px. We don't use an absolute px setting for a particular page as that's user preference
+    
+
+} */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /* Overrides the browser injected CSS */ 
+
+body {
+    min-height: 100vh;
+} /* This is how vh is usually used .
+
+If the content inside the <body> exceeds the viewport height, the <body> will expand to accommodate that content.
+
+This is particularly useful in scenarios where you want the body of the page to cover the entire screen height, even if there's not enough content to fill the viewport. */ 
+
+header {
+    width: 50%;
+}
+
+h1 {
+    border: 3px dashed blue; /* But we use px setting for things like controlling the size of a border */
+    
+
+    /* By default h1 (block level element) has a width of 100% */
+
+    width: 50%; /* We are taking up 50% of the header element which is just taking 50% of the page */ 
+
+    /* Usually height isn't set for simple things as it will grow as the contents grow in a page */ 
+
+}
+
+main {
+    width: 50vw; /* But the % is usually used. The vw may produce a horz scroll bar */
+    background-color: skyblue; /* We clearly sees that the width of our para is wider than our main element */ 
+    font-size: 2rem; 
+}
+
+/* We could set a font size for our paragraph element */
+p {
+    font-size: 2rem; /* Default is 1rem (16px). rem stands for 'root em'. It's relative to the root element's font size . Ex, 2rem is 32px . 
+    It's always relative to the browser font size and not relative to any parent element .
+    */
+
+    /* But when we use em it gets bigger relative to the parent element (here the main element ) . So em s should be used carefully .*/
+
+    /* We can use the ch unit to set layouts and typography because it adapts to the font used in the document . It represents the width of the "0" (zero) character in the current font */
+    width: 40ch; /* There are approx 40 characters before the line wraps . */
+
+
+}
+
+/* Example of using rem and em */
+h1 {
+    font-size: 3rem;
+    padding: 0.5em; /* Space between the content of an element and its border. This is relative to the font-size . Note: This may be used when creating a button with a margin .  */
+}
+

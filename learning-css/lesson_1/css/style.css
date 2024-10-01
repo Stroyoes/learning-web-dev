@@ -1,0 +1,88 @@
+/* * {
+    font-family: monospace;
+} The universal selector selects everything (Used for css reset). This is not how we use this ! Will be covered in later lessons ! 
+ */
+
+/* body {
+    font-size: 22px;
+}
+    This is called inheritance. The size was changed for elements under body .
+ */
+
+p {
+    color: blueviolet;
+} /* Element selector selects all elements of that type . */
+
+/* 
+p {
+    color: red;
+} Css reads from the top to bottom. But specificity can override this . Even if the gray class was above this one the red will be overridden.  */
+
+.gray {
+    color: gray;
+} /* Only the specific classes we set are changed . More specific than element selectors . Therefore the purple for the two p's at bottom was overridden . */
+
+/* 
+#second {
+    font-style: italic;
+} Id's should be unique. But it isn't a good way to use ids inside CSS.  */
+
+/* Should come at the top in a real scenario */
+h1, h2 {
+    color: blue;
+
+} /* Group selector */
+
+/* It's a totally different thing without the comma
+h1 h2 {
+    color: blue;
+} In this one any h2 inside h1 will be colored blue
+ */
+
+/* 
+p span {
+    text-transform: uppercase;
+    background-color: gold;
+} But this is where we should use a class, As classes are more reusable than nested selection .
+ */
+
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+/* 
+Inheritance : 
+
+- typically font and typography (color, line height, alignment etc.) are inherited . Others aren't, like a border style (eg. border style in the for the body element .) 
+
+- Keeps our code DRY (Don't Repeat Yourself) . 
+
+- Form elements do not inherit (like, button, input, textarea, select). To enable we can do this :
+
+button, input, textarea, select {
+    font: inherit; 
+
+- But using universal selector is NOT inheritance , its selecting all the elements .
+
+* {
+    border: 1px solid red;
+}
+
+- A good convention is to keep the font settings of the page in html element. 
+
+html {
+    font-size: 22px;
+}
+
+- A main element should appear only once per page. In this example the h1 is outside the main element.
+
+main {
+    font-family: monospace;
+}
+
+- Css specificity: element selector < class selector < id selector
+- With the !important flag the important css will overridde everything else. DO NOT USE IT MORE THAN ONE TIME IN YOUR CODE (BAD). 
+
+- You can calculate the specificity of different elements : https://specificity.keegan.st/
+*/

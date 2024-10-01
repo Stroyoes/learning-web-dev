@@ -1,0 +1,99 @@
+body {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.5; /* Controls the amount of space between lines of text. Here the line height is set to be 1.5 times the font-size . */
+
+    background-color: papayawhip; /* Short hand 'background' . Always pick colors that are legible or readable for viewers */
+
+    /* color: darkblue;  The font color */
+
+    /*
+    Another way to set colors are to use RGB values
+    
+    color: rgb(0,0,255)
+    
+    is blue . 
+    */
+
+    color: rgb(0,0,0);
+}
+
+p {
+    color: rgba(0,0,0,0.5); /* Adds an alpha channel which controls the transparency. Instead of 0-255 alpha channel value varies from 0-1 .*/
+}
+
+/* 
+Another way to color is to use hexadecimal . Hexadecimal(or hex) color codes in CSS are a way to specify colors using a six-character code preceded by a # symbol. The six characters represent the intensities of red, green, and blue (RGB), which combine to form the final color 
+
+A hex color is structured as follows:
+
+#RRGGBB
+
+RR: Represents the red component (00 to ff, in hexadecimal).
+GG: Represents the green component (00 to ff).
+BB: Represents the blue component (00 to ff).
+
+Each component (RR, GG, BB) is a two-digit hexadecimal number, ranging from 00 (the minimum intensity) to ff (the maximum intensity, or 255 in decimal).
+
+Examples:
+
+color: #000000; is pure black
+color: #ffffff; is pure white
+color: #ff0000; is red
+color: #0000ff; is blue
+color: #00ff00; is green
+color: #808080; is gray
+
+Shorthand Hex Codes
+
+If both digits of each color component are the same, you can use shorthand notation:
+
+    Example: #ffAA77 can be shortened to #fA7.
+        Full form: #ffAABB
+        Shorthand: #fAB
+
+Adding Transparency (Hex with Alpha)
+
+Hex colors can also include transparency using an 8-character code where the last two digits represent the alpha (opacity) level:
+
+#RRGGBBAA
+
+AAA: Opacity level, where 00 is fully transparent and ff is fully opaque.
+
+Example: #ff573380
+
+    Red = ff, Green = 57, Blue = 33, Alpha = 80 (about 50% transparent).
+
+
+p {
+    color: #0f0;
+}
+*/
+
+/* 
+Another way to set colors is through hsl or hsla (Hue, Saturation, and Lightness, with A in HSLA representing Alpha (transparency)) .
+
+Hue: Represents the color on the color wheel, ranging from 0 to 360 degrees.
+
+    0° = Red
+    120° = Green
+    240° = Blue
+
+Saturation: Represents the intensity of the color, from 0% (gray/desaturated) to 100% (full color).
+
+Lightness: Represents the brightness of the color, from 0% (black) to 100% (white).
+
+Example: 
+
+color: hsl(0, 100%, 50%); a pure red color
+
+The alpha value ranges from 0 (completely transparent) to 1 (fully opaque).
+
+Example: 
+
+color: hsla(0, 100%, 50%, 0.5); semi-transparent red
+
+A great color pallette picking tool is https://coolors.co/ . 
+You can also use a contrast checker to create a more effective and user-friendly design.
+*/
